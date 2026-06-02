@@ -1,7 +1,7 @@
 # Array - two types 
 # 1.Homogeneous - same datatypes
 # 2.Heterogenous - different datatypes 
-
+#3.fixed size - no addition after size full
 #properties - 
 #1.contigUous
 #2.similar types of data (homo in c, c++,... etc,.)
