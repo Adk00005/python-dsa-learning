@@ -47,8 +47,8 @@ class Graph:
         self.mat[old_src][old_dest] = 0 
         self.mat[old_dest][old_src] = 0 
 
-        self.mat[new_src][old_dest] = 1 
-        self.mat[new_dest][old_src] = 1 
+        self.mat[new_src][new_dest] = 1 
+        self.mat[new_dest][new_src] = 1 
         print("edge updated successfully.")
 
 vertices = int(input("Enter number of vertices: "))
