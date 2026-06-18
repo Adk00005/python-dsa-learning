@@ -21,3 +21,24 @@ def knapsackDP(wt, value, capacity):
 weights = [2,3,4,5]
 values = [3,4,5,6]
 knapsackDP(weights, values, 5)
+
+# upper 2d matrix program takes large memory, not good for large data program
+
+# use 1d array instead for better efficiency 
+
+def knapsackIterative(wt, value, capacity):
+    # 1. Initialize a 1D array with zeros for all capacities up to 'capacity'
+    dp = [0] * (capacity + 1)
+    
+    # 2. Iterate through each item one by one
+    for i in range(len(wt)):
+        # 3. Loop backwards from max capacity down to the current item's weight
+        for w in range(capacity, wt[i] - 1, -1):
+            
+            dp[w] = max(dp[w], dp[w - wt[i]] + value[i])
+            
+    print("Max Profit is", dp[capacity])
+
+weights = [2, 3, 4, 5]
+values = [3, 4, 5, 6]
+knapsackIterative(weights, values, 5)
